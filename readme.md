@@ -1,6 +1,6 @@
-📊 Customer Churn Detection
+📊 ##Customer Churn Detection
 
-🔍 Project Overview
+🔍 ##Project Overview
 
 Customer churn refers to the percentage of customers that stop using a company's product or service over a given period. This project aims to develop a machine learning model that predicts whether a customer will churn based on their demographic and financial data.
 
