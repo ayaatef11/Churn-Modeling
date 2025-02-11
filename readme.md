@@ -1,4 +1,4 @@
-📊 Customer Churn Detection
+📊 ##Customer Churn Detection
 
 🔍 Project Overview
 
@@ -94,12 +94,9 @@ It contains customer details, such as credit score, age, balance, gender, geogra
 
 🔽 Clone the repository:
 
-git clone https://github.com/ayaatef11/Customer_Churn_Detection.git
+git clone https://github.com/ayaatef11/Churn-Modeling.git
 cd Customer_Churn_Detection
 
-📦 Install required dependencies:
-
-pip install -r requirements.txt
 
 🏗 Run the preprocessing and training scripts:
 
@@ -136,8 +133,7 @@ python src/evaluation.py
 
 👥 Contributors
 
-Your Name
-
+Aya Atef
 📜 License
 
 This project is licensed under the MIT License.
