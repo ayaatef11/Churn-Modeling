@@ -51,17 +51,17 @@ Evaluate models using the following **performance metrics**:
 - 📏 **F1-Score**  
 - 📊 **ROC-AUC Score**  
 
-⚖️ Compare all models based on performance metrics and identify the best-performing model.
+### ⚖️ Compare all models based on performance metrics and identify the best-performing model.
 
-🎯 Deliverables
+## 🎯 Deliverables
 
-🤖 A trained model capable of predicting customer churn.
+- 🤖 A trained model capable of predicting customer churn.
 
-📊 A comparative analysis of different machine learning models.
+- 📊 A comparative analysis of different machine learning models.
 
-🖼️ Visual representations of results and insights from the dataset.
+- 🖼️ Visual representations of results and insights from the dataset.
 
-📁 Repository Structure
+### 📁 Repository Structure
 
 |-- Customer_Churn_Detection/
     |-- data/
@@ -69,24 +69,24 @@ Evaluate models using the following **performance metrics**:
     |-- file.ipynb
     |-- README.md
 
-🚀 How to Run the Project
+### 🚀 How to Run the Project
 
-🔽 Clone the repository:
+## 🔽 Clone the repository:
 
-git clone https://github.com/ayaatef11/Churn-Modeling.git
-cd Customer_Churn_Detection
+- git clone https://github.com/ayaatef11/Churn-Modeling.git
+- cd Customer_Churn_Detection
 
 
-🏗 Run the preprocessing and training scripts:
+### 🏗 Run the preprocessing and training scripts:
 
 python src/data_processing.py
 python src/model_training.py
 
-📊 View results and model evaluation:
+### 📊 View results and model evaluation:
 
 python src/evaluation.py
 
-🛠 Dependencies
+### 🛠 Dependencies
 
 🐍 Python 3.x
 
@@ -110,10 +110,10 @@ python src/evaluation.py
 
 📉 Visualizations and charts are provided to illustrate key findings.
 
-👥 Contributors
+### 👥 Contributors
 
-Aya Atef
-📜 License
+## Aya Atef
+### 📜 License
 
 This project is licensed under the MIT License.
 
