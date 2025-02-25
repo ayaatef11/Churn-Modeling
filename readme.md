@@ -1,88 +1,67 @@
-📊 ##Customer Churn Detection
+# 📊 Customer Churn Detection  
 
-🔍 Project Overview
+## 🔍 Project Overview  
+Customer churn refers to the percentage of customers who stop using a company's product or service over a given period. This project aims to develop a **machine learning model** to predict whether a customer will churn based on demographic and financial data.  
 
-Customer churn refers to the percentage of customers that stop using a company's product or service over a given period. This project aims to develop a machine learning model that predicts whether a customer will churn based on their demographic and financial data.
+## 📂 Dataset  
+The dataset used is **Churn_Modelling.csv**, containing customer details such as:  
+- **Credit Score**  
+- **Age**  
+- **Balance**  
+- **Gender**  
+- **Geography**  
+- **Exited** (whether the customer churned)  
 
-📂 Dataset
+## 🛠 Project Workflow  
 
-The dataset used is Churn_Modelling.csv
+### 1️⃣ Data Loading & Exploration  
+- 📥 Load the dataset using **pandas**.  
+- 🔎 Explore for missing values, inconsistencies, and general data insights.  
 
-It contains customer details, such as credit score, age, balance, gender, geography, and whether they exited the service (Exited column).
+### 2️⃣ Data Visualization  
+Generate visualizations to understand:  
+- 📈 **Distribution of numerical features** (Age, Credit Score, Balance, Estimated Salary).  
+- 🏷️ **Distribution of categorical features** (Gender, Geography).  
+- 🔥 **Correlation heatmap** to identify relationships between features.  
+- 🎯 **Target variable (Exited) distribution** to check for class imbalance.  
 
-🛠 Project Steps
+### 3️⃣ Feature Engineering  
+- 🔢 Encode categorical variables (**Geography, Gender**) using **One-Hot Encoding** or **Label Encoding**.  
+- ✅ Ensure feature cleanliness, relevance, and proper formatting for modeling.  
 
-1️⃣ Reading the Dataset
+### 4️⃣ Data Splitting  
+- ✂️ Split data into **80% training** and **20% testing** sets using `train_test_split` from **scikit-learn**.  
 
-📥 Load the dataset using pandas.
+### 5️⃣ Handling Class Imbalance  
+- ⚖️ If class imbalance is detected in the **Exited** column, apply **SMOTE (Synthetic Minority Oversampling Technique)** to balance the dataset.  
 
-🔎 Explore the dataset for missing values, inconsistencies, and an overall understanding of the features.
+### 6️⃣ Feature Standardization  
+- 🎚 Normalize numerical features to ensure they are on the same scale (**mean = 0, standard deviation = 1**), which is crucial for models like **SVM** and **KNN**.  
 
-2️⃣ Data Visualization
+### 7️⃣ Model Training & Evaluation  
+Train the following **machine learning models**:  
+- 🔍 **K-Nearest Neighbors (KNN)**  
+- 📖 **Naive Bayes**  
+- 💡 **Support Vector Machine (SVM)**  
+- 🌳 **Decision Tree (DT)**  
 
-📊 Generate visualizations to understand:
+Evaluate models using the following **performance metrics**:  
+- ✅ **Accuracy**  
+- 🎯 **Precision & Recall**  
+- 📏 **F1-Score**  
+- 📊 **ROC-AUC Score**  
 
-📈 Distribution of numerical features (Age, CreditScore, Balance, EstimatedSalary).
+### ⚖️ Compare all models based on performance metrics and identify the best-performing model.
 
-🏷️ Distribution of categorical features (Gender, Geography).
+## 🎯 Deliverables
 
-🔥 Correlation heatmap to identify relationships between features.
+- 🤖 A trained model capable of predicting customer churn.
 
-🎯 Target variable distribution to check for class imbalance.
+- 📊 A comparative analysis of different machine learning models.
 
-3️⃣ Feature Engineering
+- 🖼️ Visual representations of results and insights from the dataset.
 
-🔢 Encode categorical variables (e.g., Geography and Gender) using One-Hot Encoding or Label Encoding.
-
-✅ Ensure features are clean, relevant, and properly formatted for modeling.
-
-4️⃣ Splitting the Dataset
-
-✂️ Split data into training (80%) and testing (20%) sets using train_test_split from sklearn.
-
-5️⃣ Handling Class Imbalance
-
-⚖️ If there is a class imbalance in the Exited column, apply Synthetic Minority Oversampling Technique (SMOTE) to balance the classes.
-
-6️⃣ Feature Standardization
-
-🎚 Normalize numerical features to ensure they are on the same scale (mean = 0, standard deviation = 1), which is crucial for certain algorithms like SVM and KNN.
-
-7️⃣ Model Training and Evaluation
-
-🤖 Train the following machine learning models:
-
-🔍 K-Nearest Neighbors (KNN)
-
-📖 Naive Bayes
-
-💡 Support Vector Machine (SVM)
-
-🌳 Decision Tree (DT)
-
-📉 Evaluate models using:
-
-✅ Accuracy
-
-🎯 Precision and Recall
-
-📏 F1-Score
-
-📊 ROC-AUC Score
-
-8️⃣ Model Comparison
-
-⚖️ Compare all models based on performance metrics and identify the best-performing model.
-
-🎯 Deliverables
-
-🤖 A trained model capable of predicting customer churn.
-
-📊 A comparative analysis of different machine learning models.
-
-🖼️ Visual representations of results and insights from the dataset.
-
-📁 Repository Structure
+### 📁 Repository Structure
 
 |-- Customer_Churn_Detection/
     |-- data/
@@ -90,24 +69,24 @@ It contains customer details, such as credit score, age, balance, gender, geogra
     |-- file.ipynb
     |-- README.md
 
-🚀 How to Run the Project
+### 🚀 How to Run the Project
 
-🔽 Clone the repository:
+## 🔽 Clone the repository:
 
-git clone https://github.com/ayaatef11/Churn-Modeling.git
-cd Customer_Churn_Detection
+- git clone https://github.com/ayaatef11/Churn-Modeling.git
+- cd Customer_Churn_Detection
 
 
-🏗 Run the preprocessing and training scripts:
+### 🏗 Run the preprocessing and training scripts:
 
 python src/data_processing.py
 python src/model_training.py
 
-📊 View results and model evaluation:
+### 📊 View results and model evaluation:
 
 python src/evaluation.py
 
-🛠 Dependencies
+### 🛠 Dependencies
 
 🐍 Python 3.x
 
@@ -131,10 +110,10 @@ python src/evaluation.py
 
 📉 Visualizations and charts are provided to illustrate key findings.
 
-👥 Contributors
+### 👥 Contributors
 
-Aya Atef
-📜 License
+## Aya Atef
+### 📜 License
 
 This project is licensed under the MIT License.
 
