@@ -1,44 +1,86 @@
+# name: churn-modeling
+# on: [push]
+# permissions: write-all
+# jobs:
+#   run:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '16'
+#       - uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.x'
+#       - uses: iterative/setup-cml@v1
+
+
+#       - name: Prepare Environment
+#         env:
+#           GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+
+#         run: |
+#           # Your ML workflow goes here
+#           python -m pip install --upgrade pip
+#           pip install -r requirements.txt
+#           dvc pull
+#           python file.ipynb
+#           dvc add ./data/ ./models/
+#           dvc push
+
+#       - name: Generate Report
+#         env:
+#           #put it in the github /actions /secet key environment
+#           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+
+#           # Get the report
+#           echo "## Metrics" > report.md
+#           # cat metrics.txt >> report.md
+          
+#           awk 'NR%4{print "    " $0}{print ""}' metrics.txt >> report.md
+
+#           echo "## Confusion Matrix" >> report.md
+#           echo "![](./conf_matrix.png)" >> report.md
+#           cml comment create report.md
+# This workflow will build a Java project with Gradle
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
+
+
 name: churn-modeling
-on: [push]
+
+on:  
+  push:
+
 permissions: write-all
+
 jobs:
   run:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - uses: actions/setup-python@v4
+
+      - name:  Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      - uses: iterative/setup-cml@v1
 
-
-      - name: Prepare Environment
-        env:
-          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
-
+      - name: Install dependencies
         run: |
-          # Your ML workflow goes here
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          dvc pull
-          python file.ipynb
-          dvc add ./data/ ./models/
-          dvc push
 
-      - name: Generate Report
-        env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-
-          # Get the report
-          echo "## Metrics" > report.md
-          # cat metrics.txt >> report.md
-          
-          awk 'NR%4{print "    " $0}{print ""}' metrics.txt >> report.md
-
-          echo "## Confusion Matrix" >> report.md
-          echo "![](./conf_matrix.png)" >> report.md
-          cml comment create report.md
+      - name: Build and Push Docker Image
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          image: nanajanashia/demo-app
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
