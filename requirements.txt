@@ -5,3 +5,6 @@ seaborn==0.12.2
 joblib
 dvc
 dvc-gdrive==3.0.1
+# flask
+# gunicorn
+#tensorflow
