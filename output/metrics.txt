@@ -1,0 +1,72 @@
+RandomForestClassifier without-imbalance
+F1-score of Training is: 69.47 %
+F1-Score of Validation is: 54.66 %
+Accuracy (Train): 90.10 %
+Accuracy (Test): 85.90 %
+Precision (Train): 93.46 %
+Precision (Test): 79.07 %
+Recall (Train): 55.28 %
+Recall (Test): 41.77 %
+ROC-AUC Score: 0.8671
+Mean Squared Error (MSE): 0.1410
+Cross-Validation Accuracy: 0.8651 ± 0.0048
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.97      0.92      1593
+           1       0.79      0.42      0.55       407
+
+    accuracy                           0.86      2000
+   macro avg       0.83      0.69      0.73      2000
+weighted avg       0.85      0.86      0.84      2000
+
+----------------------------------------
+RandomForestClassifier with-class-weights
+F1-score of Training is: 78.68 %
+F1-Score of Validation is: 61.12 %
+Accuracy (Train): 90.96 %
+Accuracy (Test): 83.65 %
+Precision (Train): 75.75 %
+Precision (Test): 59.22 %
+Recall (Train): 81.84 %
+Recall (Test): 63.14 %
+ROC-AUC Score: 0.8679
+Mean Squared Error (MSE): 0.1635
+Cross-Validation Accuracy: 0.8450 ± 0.0085
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.89      0.90      1593
+           1       0.59      0.63      0.61       407
+
+    accuracy                           0.84      2000
+   macro avg       0.75      0.76      0.75      2000
+weighted avg       0.84      0.84      0.84      2000
+
+----------------------------------------
+RandomForestClassifier with-SMOTE
+F1-score of Training is: 87.47 %
+F1-Score of Validation is: 58.56 %
+Accuracy (Train): 90.16 %
+Accuracy (Test): 84.15 %
+Precision (Train): 91.88 %
+Precision (Test): 62.57 %
+Recall (Train): 83.47 %
+Recall (Test): 55.04 %
+ROC-AUC Score: 0.8656
+Mean Squared Error (MSE): 0.1585
+Cross-Validation Accuracy: 0.8709 ± 0.0535
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.92      0.90      1593
+           1       0.63      0.55      0.59       407
+
+    accuracy                           0.84      2000
+   macro avg       0.76      0.73      0.74      2000
+weighted avg       0.84      0.84      0.84      2000
+
+----------------------------------------
